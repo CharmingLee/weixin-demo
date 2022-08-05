@@ -6,7 +6,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.Map;
 
 /**
  * @author CharmingLee <charminglee@jieztech.com>
@@ -16,7 +15,7 @@ import java.util.Map;
 public class MessageController {
 
     @PostMapping("/receive_msg")
-    public ApiResponse msg(@RequestBody Map msg) {
+    public ApiResponse msg(@RequestBody WechatMsg msg) {
         System.out.println(msg);
         return ApiResponse.ok(0);
     }

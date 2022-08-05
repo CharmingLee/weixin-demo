@@ -1,17 +1,25 @@
 package com.tencent.wxcloudrun.model;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 /**
  * @author CharmingLee <charminglee@jieztech.com>
  * @date 2022/8/4 18:22
  */
 public class WechatMsg {
     private String action;
-    private String ToUserName;
-    private String FromUserName;
-    private Long CreateTime;
-    private String MsgType;
-    private String Content;
-    private Long MsgId;
+    @JsonProperty(value = "ToUserName")
+    private String toUserName;
+    @JsonProperty(value = "FromUserName")
+    private String fromUserName;
+    @JsonProperty(value = "CreateTime")
+    private Long createTime;
+    @JsonProperty(value = "MsgType")
+    private String msgType;
+    @JsonProperty(value = "Content")
+    private String content;
+    @JsonProperty(value = "MsgId")
+    private Long msgId;
 
     public String getAction() {
         return action;
@@ -22,63 +30,63 @@ public class WechatMsg {
     }
 
     public String getToUserName() {
-        return ToUserName;
+        return toUserName;
     }
 
     public void setToUserName(String toUserName) {
-        ToUserName = toUserName;
+        this.toUserName = toUserName;
     }
 
     public String getFromUserName() {
-        return FromUserName;
+        return fromUserName;
     }
 
     public void setFromUserName(String fromUserName) {
-        FromUserName = fromUserName;
+        this.fromUserName = fromUserName;
     }
 
     public Long getCreateTime() {
-        return CreateTime;
+        return createTime;
     }
 
     public void setCreateTime(Long createTime) {
-        CreateTime = createTime;
+        this.createTime = createTime;
     }
 
     public String getMsgType() {
-        return MsgType;
+        return msgType;
     }
 
     public void setMsgType(String msgType) {
-        MsgType = msgType;
+        this.msgType = msgType;
     }
 
     public String getContent() {
-        return Content;
+        return content;
     }
 
     public void setContent(String content) {
-        Content = content;
+        this.content = content;
     }
 
     public Long getMsgId() {
-        return MsgId;
+        return msgId;
     }
 
     public void setMsgId(Long msgId) {
-        MsgId = msgId;
+        this.msgId = msgId;
     }
 
     @Override
     public String toString() {
         return "WechatMsg{" +
                 "action='" + action + '\'' +
-                ", ToUserName='" + ToUserName + '\'' +
-                ", FromUserName='" + FromUserName + '\'' +
-                ", CreateTime=" + CreateTime +
-                ", MsgType='" + MsgType + '\'' +
-                ", Content='" + Content + '\'' +
-                ", MsgId=" + MsgId +
+                ", toUserName='" + toUserName + '\'' +
+                ", fromUserName='" + fromUserName + '\'' +
+                ", createTime=" + createTime +
+                ", msgType='" + msgType + '\'' +
+                ", content='" + content + '\'' +
+                ", msgId=" + msgId +
                 '}';
     }
 }
